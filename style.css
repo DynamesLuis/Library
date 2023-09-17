@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(69, 57, 77);
+}
+
+.containerBooks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: #fff;
+    width: 250px;
+    padding: 10px;
+    margin: 1rem;
+    box-shadow: 0 4px 5px rgba(0,0, 0, 0.2);   
+    border-radius: 3px;
+}
+
+.card h3 {
+    font-size: 22px;
+}
+
+.card .author {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.card .pages {
+    font-size: 18px;
+}
+
+.card .read {
+    font-size: 18px;
+}
+
+.card .changeRead {
+    background-color: #E74C3C;
+    width: 100PX;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card .changeRead:hover {
+    background-color: #C0392B;
+}
+
+.card .changeRead:active {
+    scale: 0.98;
+}
+
+.card .closeCard {
+    z-index: 1;
+}
+
+#addBook {
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #008CBA;
+}
+
+#addBook:hover {
+    background-color: #5299b1;
+}
+
+#addBook:active {
+    scale: 0.98;
+}
+
+.poup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 95, 73);
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+    opacity: 0;
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75);
+}
+
+.poup.active {
+    opacity: 1;
+}
+
+.poup #closePopup,
+.card .closeCard {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color:rgb(249, 228, 101);
+    border: none;
+    font-size: 20PX;
+    border-radius: 5px;
+}
+
+.poup #closePopup:hover,
+.card .closeCard:hover {
+    background-color:rgb(241, 217, 77);
+}
+
+.poup #closePopup:active,
+.card .closeCard:active {
+    scale: 0.96;
+}
+
+.poup h3 {
+    text-align: center;
+}
+
+.poup > input {
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    padding: 2px;
+}
+
+.poup > input:focus {
+    outline: none;
+}
+
+.poup p {
+    text-align: center;
+}
+
+.poup .read-it {
+    margin: 0 auto;
+}
+
+#addNew {
+    width: 90px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #008CBA;
+}
+
+#addNew:hover {
+    background-color: #5299b1;
+}
+
+#addNew:active {
+    scale: 0.98;
+}
