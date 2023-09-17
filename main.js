@@ -31,17 +31,31 @@ function getBookValues() {
     document.getElementById("bookTitle").value = "";
     document.getElementById("bookAuthor").value = "";
     document.getElementById("bookPages").value = "";
-    document.querySelector("input[type=radio]:checked").checked = false;  
+    document.querySelector("input[type=radio]:checked").checked = false;
 }
 
-function book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
+// function book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.info = function () {
+//         const isRead = this.read === 'read' ? `already ${this.read}` : `${this.read} yet`;
+//         return `${this.title} by ${this.author}, ${this, pages} pages, ${isRead} `
+//     }
+// }
+
+class book {
+    constructor(titlle, author, pages, read) {
+        this.title = titlle;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info() {
         const isRead = this.read === 'read' ? `already ${this.read}` : `${this.read} yet`;
-        return `${this.title} by ${this.author}, ${this,pages} pages, ${isRead} `
+        return `${this.title} by ${this.author}, ${this, pages} pages, ${isRead} `
     }
 }
 
@@ -61,7 +75,7 @@ function displayBooks(library) {
             <p class="author">by ${book.author}</p>
             <p class="pages">${book.pages} pages</p>
             <p class="read">${book.read}</p>
-            ${book.read === 'not read'? '<button class="changeRead" data-index=${index}>Change Read Status</button>' : ""}
+            ${book.read === 'not read' ? '<button class="changeRead" data-index=${index}>Change Read Status</button>' : ""}
         `;
         containerBooks.appendChild(bookEl);
     });
